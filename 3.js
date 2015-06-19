@@ -6,7 +6,7 @@ var fact = 2;
 var factors = [];
 
 for (fact; Math.round(Math.sqrt(number)); fact++) {	
-	if (number === 1) {
+	if (number < fact) {
 		break;
 	}
 	if (fact%2 === 0) { 
