@@ -1,14 +1,14 @@
 // Largest palindrome product
 // Find the largest palindrome made from the product of two 3-digit numbers
 
-var uno=99; length=0;
+var uno=999; length=0;
 var dos; result=[];
 var palindromo; 
 
 palindromo:
-while (uno>1) {
-	dos=99;	
-	while (dos>1) {
+while (uno>0) {
+	dos=999;	
+	while (dos>0) {
 		result = (uno*dos).toString().split("");
 		length = result.length;
 		palindromo = true;
@@ -22,7 +22,7 @@ while (uno>1) {
 		if (palindromo) {
 			break palindromo;
 		}
-		console.log(result);
+		//console.log(result);
 		--dos;
 	}
 	--uno;	
