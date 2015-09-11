@@ -14,7 +14,6 @@ for (fact; Math.round(Math.sqrt(number)); fact++) {
 	if (fact%2 === 0 && fact!=2) { 
 		continue;
 	}
-	//console.log("fact=" + fact);
 	for (i in primes) {
 		//console.log(primes[i]);
 		if (fact%primes[i] === 0) {
@@ -23,7 +22,7 @@ for (fact; Math.round(Math.sqrt(number)); fact++) {
 	}
 	if (number%fact === 0) {
 		factors.push(fact);
-		console.log("factor=" +fact);
+		//console.log("factor=" +fact);
 		while (number%fact === 0) {
 			number /= fact;
 		}

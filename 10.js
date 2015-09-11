@@ -2,28 +2,31 @@
 // Find the sum of all the primes below two million.
 
 var primes = [];
-var suma = 1;
-var prime;
-var cont = 1;
+var fact = 2;
+var sum, prime;
 
-fact:
-for (var i=2; i<2000000; ++i) {
-	if (i%2 === 0 && i!=2) { 
+prime:
+//while (primes.length < 20000) {
+while (fact < 200000) {
+        while (fact%2 === 0 && fact!=2) { 
+		++fact;
 		continue;
+        }
+	prime = true;
+        for (i in primes) {
+                //console.log(primes[i]);
+                if (fact%primes[i] === 0) {
+			prime = false;
+			++fact;
+			continue prime;
+                }
+        }
+	
+	if (prime) {
+		primes.push(fact);
+		//console.log("prime=" + fact);
 	}
-	for (j in primes) {
-		//console.log(primes[j]);
-		if (i%primes[j] === 0) {
-			continue fact;
-		}
-	}
-	if (i<2000) {
-	primes.push(i);
-	}
-	suma += i;
-	//++cont;
-	console.log(i + ", suma=" + suma);
+	++fact;
 }
 
-//console.log("primes=" + primes);
-console.log("suma=" + suma);
+console.log(primes);
