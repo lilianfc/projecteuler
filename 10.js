@@ -10,12 +10,12 @@ prime:
 while (fact < 200000) {
         while (fact%2 === 0 && fact!=2) { 
 		++fact;
-		continue;
+		continue prime;
         }
 	prime = true;
         for (i in primes) {
                 //console.log(primes[i]);
-                if (fact%primes[i] === 0) {
+                if (fact%i === 0) {
 			prime = false;
 			++fact;
 			continue prime;
@@ -24,7 +24,7 @@ while (fact < 200000) {
 	
 	if (prime) {
 		primes.push(fact);
-		//console.log("prime=" + fact);
+		console.log("prime=" + fact);
 	}
 	++fact;
 }
