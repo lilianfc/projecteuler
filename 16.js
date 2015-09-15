@@ -1,5 +1,8 @@
+// Power digit sum
+// What is the sum of the digits of the number 21000?
+
 var number = Math.pow(2, 1000);
-var numString = number.toString();
+var numString = parseFloat(number);
 var sum = 0;
 console.log(numString[0]);
 console.log(number.toFixed(3));
